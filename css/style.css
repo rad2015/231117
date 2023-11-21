@@ -1,0 +1,222 @@
+@charset "UTF-8";
+
+/* reset */
+* {margin: 0; padding: 0;}
+ul,li {margin: 0; padding: 0; list-style: none;}
+a {text-decoration: none;}
+img:hover {opacity: 0.9;}
+/* 전체영역안에 모든 이미지 hover 효과적용 */
+
+/* layout */
+#wrap {
+    width: 1200px; margin: 0 auto;
+    /* 중앙정렬을 위해서 가로크기 지정 필수 */
+}
+
+/* header */
+#wrap header {
+    display: flex;
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-bottom: 1px solid #666;
+}
+#wrap header h1.logo {
+    width: 200px; height: 100px;
+    background-color: #fff;
+}
+#wrap header h1.logo img {
+    width: 110px;
+    margin-top: 42px;
+    margin-left: 10%;
+}
+#wrap header nav.menu {
+    float: right;
+    width: 1000px; height: 100px;
+    /* border: 1px solid red; */
+}
+#wrap header nav.menu ul {
+    width: 400px;
+    justify-content: space-between;
+    padding: 0 30px;
+    display: flex;
+    float: right;
+    gap: 15px;
+}
+#wrap header nav.menu ul li a {
+    display: block;
+    font-family:  'Exo 2';
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    margin-top: 40px;
+    text-transform: uppercase; /* 텍스트를 대문자로 일괄변경 */
+}
+#wrap header nav.menu ul li a:hover,
+#wrap header nav.menu ul li a:focus {
+    border-bottom: 2px solid #0067f4;
+    padding-bottom: 10px;
+    color: #0067f4;
+}
+
+/* main */
+#wrap main {
+    width: 1200px;
+    height: auto;
+    /* background-color: #666; */
+}
+#wrap main .slide {
+    width: 1200px;
+    height: 300px;
+    background-color: #fff;
+}
+
+
+/* slick */
+.banner_slider {
+    background-color: #fff;
+}
+.banner_slider .items p {
+    margin-top: 30px; margin-bottom: 30px;
+}
+.banner_slider .items p img {
+    border-radius: 50%;
+    width: 150px; height: 150px;
+    border: 1px solid #ddd;
+    /* box-shadow: 0 0 10px rgba(0,0,0,0.2); */
+}
+
+
+#wrap main .content {
+    display: flex;
+    width: 1200px;
+    height: 200px;
+    background-color: #fff;
+}
+/* 화면분할 방법 2가지
+       1. 갯수 ÷ 가로사이즈 (400px*3ea)
+       2. 갯수 ÷ 가로사이즈 (33.333%) */
+#wrap main .content>div {
+    width: 400px; height: 200px;
+}
+/* #wrap main .content div {
+    width: 33.333%; height: 200px;
+} */
+
+#wrap main .content .noticeGallery {
+    /* background-color: #666; */
+    position: relative;
+}
+#wrap main .content .noticeGallery h2 {
+    margin-top: 14px;
+    font-size: 18px;
+    color: #000;
+    padding: 0 10px;
+}
+#wrap main .content .noticeGallery h2+a {
+    position: absolute;
+    top: 20px; right: 20px;
+    text-decoration: none;
+    font-size: 13px;
+    color: #000;
+}
+#wrap main .content .noticeGallery h2+a:hover {
+    text-decoration: underline;
+}
+
+
+#wrap main .content .noticeGallery ul {
+    padding: 0 20px 0 10px;
+    margin-top: 2px;
+}
+#wrap main .content .noticeGallery ul li {
+    height: 28px;
+    line-height: 28px;
+    border-bottom: 1px dashed #ccc;
+}
+#wrap main .content .noticeGallery ul li a {
+    max-width: 300px;
+    width: 80%; /* 노출 제목 영역 사이즈 */
+    height: 25px;
+    display: block;
+    float: left;
+    font-size: 14px;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* 내용이 길경우 .. 표시 */
+    white-space: nowrap; /* 추가 줄바꿈제어 */  
+    word-break: keep-all; /* 추가 - 단어 단위로 줄바꿈 */
+}
+#wrap main .content .noticeGallery ul li a:hover {
+    text-decoration: underline;
+}
+#wrap main .content .noticeGallery ul li span {
+    font-size: 13px;
+    color: #bdbdbd;
+    float: right;
+}
+
+/* #wrap main .content .noticeGallery {
+    background-color: #fff;
+}
+#wrap main .content .banner1 {
+    background-color: #fff;
+}
+#wrap main .content .banner2 {
+    background-color: #fff;
+} */
+
+/* fooer */
+#wrap footer {
+    display: flex;
+    width: 1200px;
+    height: 100px;
+    background-color: #fff;
+    border-top: 1px solid #666;
+}
+#wrap footer .bottomLogo {
+    width: 200px; height: 100px;
+    /* background-color: #fff; */
+    /* border: 1px solid red; */
+}
+#wrap footer .bottomLogo img {
+    width: 70px;
+    margin-top: 45px;
+    margin-left: 10%;
+    opacity: 0.6;
+}
+#wrap footer .copyright {
+    width: 800px; height: 100px;
+    /* background-color: #fff; */
+    /* border: 1px solid red; */
+}
+#wrap footer .copyright p {
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+    margin-top: 43px; /* (height - font size) ÷ 2 */
+}
+#wrap footer .copyright p a {
+    color: #999;
+    font-weight: bold;
+}
+#wrap footer .sns {
+    width: 200px; height: 100px;
+    /* background-color: #fff; */
+    /* border: 1px solid red; */
+}
+#wrap footer .sns ul {
+    display: flex;
+    width: 120px;
+    margin-top: 35px;
+    margin-right: 10%;
+    /* margin-left: 40px; */
+    float: right;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+#wrap footer .sns ul li a img {
+    width: 25px;
+}
